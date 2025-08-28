@@ -6,8 +6,23 @@
   <title>ToDot</title>
 </head>
 <body>
-  <div class="sidebar"></div>
+  <div class="sidebar">
+    <div class="logo">
+      <img src="./assets/images/logo.png" alt="ToDot Logo">
+    </div>
+    <div class="projects-section">
+      <h2>My Projects</h2>
+      <ul class="project-list" id="project-list">
+        <!-- Projects will be dynamically added here by JavaScript -->
+      </ul>
+      <div class="add-project">
+        <input type="text" id="new-project-input" placeholder="Add new project...">
+        <button id="add-project-btn">+</button>
+      </div>
+    </div>
+  </div>
   <div class="task-list"></div>
-  <div class="task-container"></div>
+  <div class="task-container">
+  </div>
 </body>
 </html>
