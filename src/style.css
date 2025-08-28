@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* --- CSS Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* --- High-level Variables & Styles --- */
+:root {
+  --font-family: 'Montserrat', sans-serif;
+  --bg-main: #FDFDFF;
+  --bg-sidebar: #F4F7F5;
+  --bg-content: #FFFFFF;
+  --color-text: #2D3142;
+  --color-accent: #A8D8EA;
+  --border-color: #EAEBED;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-main);
+  color: var(--color-text);
+  display: flex;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Generic Layout Classes --- */
+.sidebar {
+  width: 280px;
+  background-color: var(--bg-sidebar);
+  padding: 40px 20px;
+  border-right: 1px solid var(--border-color);
+}
+
+.task-list {
+  flex: 1;
+  padding: 40px;
+  background-color: var(--bg-content);
+}
+
+/* I'm assuming this might be for a detail view or form */
+.task-container {
+  width: 320px;
+  padding: 40px;
+  border-left: 1px solid var(--border-color);
+}
+
+/* --- Generic Element Styling --- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+button {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-accent);
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="date"] {
+  font-family: var(--font-family);
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 2px solid var(--color-accent);
+  border-color: transparent;
+}
