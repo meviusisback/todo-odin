@@ -3,20 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true, // Cleans the dist folder before each build
+    clean: true,
     publicPath: './', // Important for GitHub Pages
-  },
-  devServer: {
-    static: './dist', // Serves from the dist folder
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // Uses your html file as a template
+      template: './src/index.html',
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -27,7 +24,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i, // For bundling CSS files
+        test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
     ],
